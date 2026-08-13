@@ -27,9 +27,6 @@
         out.push({ src: c.image, alt: c.alt || (p.name + ' ' + c.name), position: '50% 50%', color: c.id });
       });
     }
-    (p.features || []).forEach(function (f) {
-      out.push({ src: f.image, alt: f.alt, position: f.position });
-    });
     (p.images.gallery || []).forEach(function (g) {
       out.push({ src: g.src, alt: g.alt, position: g.position });
     });
@@ -85,12 +82,17 @@
         '</div>';
 
       var confs = (p.features && p.features.length) ?
-        '<div class="confs-wrap"><h3 class="confs__title">' + esc(p.featuresTitle) + '</h3>' +
-        '<div class="chips" role="group" aria-label="' + esc(p.featuresTitle) + ' de ' + esc(p.name) + '">' +
-        p.features.map(function (f) {
-          var idx = slides.findIndex(function (s) { return s.src === f.image; });
-          if (idx < 0) idx = 0;
-          return '<button type="button" class="chip" data-slide="' + idx + '" aria-pressed="false">' +
+        '<div class="confs-wrap" data-confview>' +
+        '<h3 class="confs__title">' + esc(p.featuresTitle) + '</h3>' +
+        '<figure class="confview__frame" aria-roledescription="visor" aria-label="' + esc(p.featuresTitle) + ' de ' + esc(p.name) + '">' +
+        p.features.map(function (f, k) {
+          return '<img src="' + esc(f.image) + '" alt="' + esc(f.alt) + '" width="700" height="525"' +
+            (k ? ' hidden' : '') + ' loading="lazy" decoding="async">';
+        }).join('') +
+        '</figure>' +
+        '<div class="chips" role="group" aria-label="Elegir ' + esc(p.featuresTitle.toLowerCase()) + ' de ' + esc(p.name) + '">' +
+        p.features.map(function (f, k) {
+          return '<button type="button" class="chip" data-conf="' + k + '" aria-pressed="' + (k === 0) + '">' +
             esc(f.name) + '</button>';
         }).join('') + '</div></div>' : '';
 
@@ -169,7 +171,7 @@
       dots.forEach(function (d, k) { d.setAttribute('aria-current', String(k === at)); });
       var grid = g.closest('.product__grid');
       if (grid) {
-        grid.querySelectorAll('.var[data-slide], .chip[data-slide]').forEach(function (b) {
+        grid.querySelectorAll('.var[data-slide]').forEach(function (b) {
           b.setAttribute('aria-pressed', String(Number(b.dataset.slide) === at));
         });
       }
@@ -197,10 +199,39 @@
 
     var grid = g.closest('.product__grid');
     if (grid) {
-      grid.querySelectorAll('.var[data-slide], .chip[data-slide]').forEach(function (b) {
+      grid.querySelectorAll('.var[data-slide]').forEach(function (b) {
         b.addEventListener('click', function () { go(Number(b.dataset.slide)); });
       });
     }
+  }
+
+  /* -------------------------------------------------- visor de configuración */
+  function initConfView(root) {
+    var imgs = Array.prototype.slice.call(root.querySelectorAll('.confview__frame > img'));
+    var chips = Array.prototype.slice.call(root.querySelectorAll('.chip[data-conf]'));
+    if (imgs.length < 2) return;
+    var at = 0;
+
+    function go(n) {
+      at = (n + imgs.length) % imgs.length;
+      imgs.forEach(function (im, k) { im.hidden = k !== at; });
+      chips.forEach(function (c, k) { c.setAttribute('aria-pressed', String(k === at)); });
+    }
+
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () { go(Number(c.dataset.conf)); });
+    });
+
+    var frame = root.querySelector('.confview__frame');
+    var x0 = null, y0 = null;
+    frame.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    frame.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      var dy = e.changedTouches[0].clientY - y0;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) go(at + (dx < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
   }
 
   /* -------------------------------------------------------------- buscar */
@@ -329,6 +360,7 @@
     renderCards();
     renderProducts();
     document.querySelectorAll('[data-gallery]').forEach(initGallery);
+    document.querySelectorAll('[data-confview]').forEach(initConfView);
     initSearch();
     initMotion();
     initSchema();
