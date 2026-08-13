@@ -86,12 +86,13 @@
 
       var confs = (p.features && p.features.length) ?
         '<div class="confs-wrap"><h3 class="confs__title">' + esc(p.featuresTitle) + '</h3>' +
-        '<ul class="confs' + (p.features.length === 2 ? ' confs--2' : '') + '">' +
-        p.features.map(function (f, k) {
-          return '<li class="conf"><span class="conf__n" aria-hidden="true">' + (k + 1) + '</span>' +
-            '<img src="' + esc(f.image) + '" alt="' + esc(f.alt) + '" width="700" height="525" loading="lazy" decoding="async">' +
-            '<span class="conf__l">' + esc(f.name) + '</span></li>';
-        }).join('') + '</ul></div>' : '';
+        '<div class="chips" role="group" aria-label="' + esc(p.featuresTitle) + ' de ' + esc(p.name) + '">' +
+        p.features.map(function (f) {
+          var idx = slides.findIndex(function (s) { return s.src === f.image; });
+          if (idx < 0) idx = 0;
+          return '<button type="button" class="chip" data-slide="' + idx + '" aria-pressed="false">' +
+            esc(f.name) + '</button>';
+        }).join('') + '</div></div>' : '';
 
       var vars = multi ?
         '<div class="vars"><h3 class="confs__title">' + esc(p.featuresTitle) + '</h3>' +
@@ -166,9 +167,9 @@
       at = (n + imgs.length) % imgs.length;
       imgs.forEach(function (im, k) { im.hidden = k !== at; });
       dots.forEach(function (d, k) { d.setAttribute('aria-current', String(k === at)); });
-      var vars = g.closest('.product__grid');
-      if (vars) {
-        vars.querySelectorAll('.var[data-slide]').forEach(function (b) {
+      var grid = g.closest('.product__grid');
+      if (grid) {
+        grid.querySelectorAll('.var[data-slide], .chip[data-slide]').forEach(function (b) {
           b.setAttribute('aria-pressed', String(Number(b.dataset.slide) === at));
         });
       }
@@ -196,7 +197,7 @@
 
     var grid = g.closest('.product__grid');
     if (grid) {
-      grid.querySelectorAll('.var[data-slide]').forEach(function (b) {
+      grid.querySelectorAll('.var[data-slide], .chip[data-slide]').forEach(function (b) {
         b.addEventListener('click', function () { go(Number(b.dataset.slide)); });
       });
     }
@@ -300,6 +301,29 @@
     document.head.appendChild(s);
   }
 
+  /* ---------------------------------------- desplazamiento suave interno */
+  function initSmoothScroll() {
+    function scrollTo(el) {
+      var head = document.getElementById('header');
+      var offset = (head ? head.offsetHeight : 0) + 12;
+      var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: Math.max(0, top), behavior: reduce ? 'auto' : 'smooth' });
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (!a || a.getAttribute('href') === '#') return;
+      var id = a.getAttribute('href').slice(1);
+      var el = document.getElementById(id);
+      if (!el) return;
+      e.preventDefault();
+      scrollTo(el);
+      if (history.pushState) history.pushState(null, '', '#' + id);
+      /* deja el foco en el destino para lectores de pantalla y teclado */
+      el.setAttribute('tabindex', '-1');
+      el.focus({ preventScroll: true });
+    });
+  }
+
   /* ------------------------------------------------------------------ init */
   document.addEventListener('DOMContentLoaded', function () {
     renderCards();
@@ -308,6 +332,7 @@
     initSearch();
     initMotion();
     initSchema();
+    initSmoothScroll();
 
     var wa = document.getElementById('wa-general');
     if (wa) {
