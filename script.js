@@ -140,9 +140,9 @@
             '<p class="product__tag">' + esc(p.tagline) + '</p>' +
           '</header>' +
           '<div class="product__grid">' +
-            '<div class="product__media">' + gal + '</div>' +
+            '<div class="product__media">' + gal + confs + '</div>' +
             '<div class="product__info">' +
-              confs + vars +
+              vars +
               '<ul class="highs">' + p.highlights.map(function (h) {
                 return '<li class="high"><h3>' + esc(h.title) + '</h3>' +
                   (h.text ? '<p>' + esc(h.text) + '</p>' : '') + '</li>';
