@@ -148,7 +148,7 @@ button{font:inherit;color:inherit}
   border-radius:var(--r-md);overflow:hidden;transition:transform var(--t),box-shadow var(--t),border-color var(--t);
 }
 .card a:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(36,26,29,.09);border-color:var(--aqua)}
-.card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff}
+.card img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#fff}
 .card__t{padding:12px 14px 15px}
 .card__t b{display:block;font-family:var(--display);font-weight:700;font-size:.95rem;line-height:1.25}
 .card__t span{display:block;margin-top:4px;font-size:.78rem;letter-spacing:.06em;color:var(--vino);font-weight:400}
@@ -198,6 +198,12 @@ button{font:inherit;color:inherit}
   font-size:1rem;color:var(--verde);margin-bottom:16px;
 }
 .confs__title::after{content:"";flex:1;height:1px;background:var(--linea)}
+.confview__frame{
+  position:relative;margin:12px 0 0;background:#fff;border:1px solid var(--linea);
+  border-radius:var(--r-md);overflow:hidden;
+}
+.confview__frame img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff}
+.confview__frame img[hidden]{display:none}
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
 .chip{
   min-height:44px;padding:0 18px;border:1.5px solid var(--linea);border-radius:999px;
@@ -288,8 +294,12 @@ button{font:inherit;color:inherit}
   .hero__text{padding-bottom:64px}
   .finder{padding-top:64px}
   .finder__search{max-width:520px}
-  .cards{grid-auto-columns:minmax(200px,26%)}
-  .cards.is-filtered{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+  .cards{
+    grid-auto-flow:row;grid-template-columns:repeat(4,1fr);grid-auto-columns:auto;
+    gap:16px;overflow-x:visible;scroll-snap-type:none;margin-inline:0;padding:4px 0 26px;
+  }
+  .card img{aspect-ratio:1/1}
+  .cards.is-filtered{grid-template-columns:repeat(4,1fr)}
   .product{padding:64px 0}
   .product__grid{grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:44px;align-items:start}
   .product--flip .product__media{order:2}
