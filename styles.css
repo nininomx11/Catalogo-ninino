@@ -177,7 +177,7 @@ button{font:inherit;color:inherit}
   position:relative;margin:0;background:#fff;border:1px solid var(--linea);
   border-radius:var(--r-lg);overflow:hidden;
 }
-.gallery__frame img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#fff}
+.gallery__frame img{width:100%;aspect-ratio:4/3;max-height:420px;object-fit:cover;background:#fff}
 .gallery__frame img[hidden]{display:none}
 .gallery__nav{position:absolute;inset:auto 0 0;display:flex;justify-content:space-between;padding:10px;pointer-events:none}
 .gallery__btn{
@@ -203,10 +203,10 @@ button{font:inherit;color:inherit}
 }
 .confs__title::after{content:"";flex:1;height:1px;background:var(--linea)}
 .confview__frame{
-  position:relative;margin:12px 0 0;background:#fff;border:1px solid var(--linea);
+  position:relative;margin:14px 0 0;background:#fff;border:1px solid var(--linea);
   border-radius:var(--r-md);overflow:hidden;
 }
-.confview__frame img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#fff}
+.confview__frame img{width:100%;aspect-ratio:3/2;max-height:300px;object-fit:contain;background:#fff}
 .confview__frame img[hidden]{display:none}
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
 .chip{
@@ -305,6 +305,8 @@ button{font:inherit;color:inherit}
   .cards.is-filtered{grid-template-columns:repeat(4,minmax(0,220px));justify-content:center}
   .product{padding:46px 0}
   .product__grid{grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:44px;align-items:start}
+  .product__media{display:flex;flex-direction:column;gap:16px}
+  .product__info{align-self:start}
   .product--flip .product__media{order:2}
   .highs{grid-template-columns:1fr 1fr}
 }
