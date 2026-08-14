@@ -82,7 +82,12 @@ const PRODUCTOS = [
     sku: 'NIN-TIPPTRAPP-BH524-BLA', barcode: '7503061922012', weight: '9.8 kg', boxedWeight: '11.2 kg', boxDimensions: '85 × 43 × 13 cm',
     images: {
       hero: { src: 'assets/images/products/bh-524/bh-524-hero.webp', small: 'assets/images/products/bh-524/bh-524-hero-640.webp', alt: 'Niño sentado en la silla escalonada Ninino BH-524 junto a la mesa', position: '50% 40%' },
-      gallery: []
+      gallery: [
+        { src: 'assets/images/products/bh-524/bh-524-etapas.webp', alt: 'Etapas de uso de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'configuracion' },
+        { src: 'assets/images/products/bh-524/bh-524-medidas.webp', alt: 'Medidas verificadas de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'especificacion' },
+        { src: 'assets/images/products/bh-524/bh-524-charola.webp', alt: 'Detalle de la charola de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'detalle' },
+        { src: 'assets/images/products/bh-524/bh-524-arnes.webp', alt: 'Detalle del arnés de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'detalle' }
+      ]
     }
   },
   {
