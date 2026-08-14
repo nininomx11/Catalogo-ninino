@@ -69,12 +69,7 @@ const PRODUCTOS = [
     slug: 'silla-escalonada', name: 'Silla escalonada', model: 'BH-524', tagline: 'Diseñada para acompañar su niñez', age: '10 meses – 5 años aprox.',
     keywords: ['silla escalonada', 'tippy trapp', 'crecedera', 'madera'],
     colors: [{ id: 'blanco', name: 'Blanco', hex: '#F2F0EC', image: 'assets/images/products/bh-524/bh-524-con-charola.webp' }],
-    featuresTitle: '3 configuraciones de uso',
-    features: [
-      { name: 'Con charola', image: 'assets/images/products/bh-524/bh-524-con-charola.webp', alt: 'Silla escalonada Ninino BH-524 con charola', position: '50% 50%' },
-      { name: 'Con asiento acolchado', image: 'assets/images/products/bh-524/bh-524-asiento-acolchado.webp', alt: 'Silla escalonada Ninino BH-524 con asiento acolchado', position: '50% 50%' },
-      { name: 'Silla escalonada', image: 'assets/images/products/bh-524/bh-524-silla-escalonada.webp', alt: 'Silla escalonada Ninino BH-524 en su configuración de silla', position: '50% 50%' }
-    ],
+    features: [],
     highlights: [
       { title: 'Arnés de 5 puntos', text: 'Sujeción durante su uso.' },
       { title: 'Altura ajustable', text: 'Ideal para varias etapas y escenarios.' }
