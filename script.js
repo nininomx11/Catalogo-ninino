@@ -28,6 +28,10 @@
         out.push({ src: c.image, alt: c.alt || (p.name + ' ' + c.name), position: '50% 50%', color: c.id });
       });
     }
+    if (p.model === 'BH-153') {
+      var rosa = p.colors.filter(function (c) { return c.id === 'rosa'; })[0];
+      if (rosa) out.push({ src: rosa.image, alt: rosa.alt || (p.name + ' ' + rosa.name), position: '50% 50%', color: rosa.id });
+    }
     (p.images.gallery || []).forEach(function (g) {
       out.push({ src: g.src, alt: g.alt, position: g.position });
     });
@@ -36,7 +40,7 @@
       if (seen[s.src]) return false;
       seen[s.src] = 1;
       return true;
-    }).slice(0, MAX_SLIDES);
+    }).slice(0, p.model === 'BH-153' ? 6 : MAX_SLIDES);
   }
 
   /* ------------------------------------------------------------ tarjetas */
@@ -102,8 +106,9 @@
         '<div class="vars"><h3 class="confs__title">' + esc(p.featuresTitle) + '</h3>' +
         '<div class="vars__list" role="group" aria-label="Colores disponibles de ' + esc(p.name) + '">' +
         p.colors.map(function (c, k) {
+          var slideIndex = colorSlides ? (k + 1) : (p.model === 'BH-153' && c.id === 'rosa' ? 1 : null);
           return '<button type="button" class="var" data-var="' + esc(c.id) + '"' +
-            (colorSlides ? ' data-slide="' + (k + 1) + '"' : '') +
+            (slideIndex !== null ? ' data-slide="' + slideIndex + '"' : '') +
             ' aria-pressed="' + (k === 0) + '"><i style="background:' + esc(c.hex) + '" aria-hidden="true"></i>' +
             esc(c.name) + '</button>';
         }).join('') + '</div></div>' :
