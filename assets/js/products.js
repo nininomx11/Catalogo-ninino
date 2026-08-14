@@ -37,7 +37,11 @@ const PRODUCTOS = [
     sku: 'NIN-SILLAALTA-BH522-GRI', barcode: '7503061922104', weight: '3.8 kg', boxedWeight: '4.3 kg', boxDimensions: '43.5 × 24.5 × 41 cm',
     images: {
       hero: { src: 'assets/images/products/bh-522/bh-522-hero.webp', small: 'assets/images/products/bh-522/bh-522-hero-640.webp', alt: 'Bebé sentado en la silla alta 3 en 1 Ninino BH-522 durante la comida', position: '50% 45%' },
-      gallery: [{ src: 'assets/images/products/bh-522/bh-522-arnes.webp', alt: 'Detalle del arnés de 5 puntos de la silla alta Ninino BH-522', position: '50% 50%', role: 'detalle' }]
+      gallery: [
+        { src: 'assets/images/products/bh-522/bh-522-medidas.webp', alt: 'Medidas verificadas de la silla alta 3 en 1 Ninino BH-522', position: '50% 50%', role: 'especificacion' },
+        { src: 'assets/images/products/bh-522/bh-522-movil.webp', alt: 'Silla alta 3 en 1 Ninino BH-522 en configuración móvil', position: '50% 50%', role: 'configuracion' },
+        { src: 'assets/images/products/bh-522/bh-522-detalles.webp', alt: 'Detalles de la silla alta 3 en 1 Ninino BH-522', position: '50% 50%', role: 'detalle' }
+      ]
     }
   },
   {
@@ -145,16 +149,17 @@ const PRODUCTOS = [
     slug: 'banera-termica', name: 'Bañera térmica', model: 'BH-221', tagline: 'Baños seguros y cómodos todos los días', age: '0 – 24 meses aprox.',
     keywords: ['bañera térmica', 'banera termica', 'termómetro', 'tina', 'baño'],
     colors: [{ id: 'gris', name: 'Gris', hex: '#C3C6C8', image: 'assets/images/products/bh-221/bh-221-respaldo.webp' }],
-    featuresTitle: 'Funciones principales',
-    features: [
-      { name: 'Respaldo cómodo', image: 'assets/images/products/bh-221/bh-221-respaldo.webp', alt: 'Bebé recostado sobre el respaldo de la bañera térmica Ninino BH-221', position: '50% 50%' },
-      { name: 'Plegable y compacta', image: 'assets/images/products/bh-221/bh-221-plegada.webp', alt: 'Bañera térmica Ninino BH-221 guardada plegada en la pared', position: '50% 50%' }
-    ],
+    features: [],
     highlights: [{ title: 'Termómetro digital', text: 'Monitorea la temperatura del agua al instante.' }, { title: 'Plegable y compacta', text: 'Fácil de guardar y transportar.' }],
     sku: 'NIN-BATHTUB-BH221-GRI', barcode: '7503061922036', weight: '0.6 kg', boxedWeight: '1.1 kg', boxDimensions: '30.5 × 9 × 54.5 cm',
     images: {
       hero: { src: 'assets/images/products/bh-221/bh-221-hero.webp', small: 'assets/images/products/bh-221/bh-221-hero-640.webp', alt: 'Bebé recostado en la bañera térmica Ninino BH-221 dentro de la tina', position: '50% 45%' },
-      gallery: []
+      gallery: [
+        { src: 'assets/images/products/bh-221/bh-221-medidas.webp', alt: 'Medidas verificadas de la bañera térmica Ninino BH-221', position: '50% 50%', role: 'especificacion' },
+        { src: 'assets/images/products/bh-221/bh-221-alturas.webp', alt: 'Alturas de uso de la bañera térmica Ninino BH-221', position: '50% 50%', role: 'configuracion' },
+        { src: 'assets/images/products/bh-221/bh-221-sensor.webp', alt: 'Detalle del sensor de la bañera térmica Ninino BH-221', position: '50% 50%', role: 'detalle' },
+        { src: 'assets/images/products/bh-221/bh-221-guardado.webp', alt: 'Bañera térmica Ninino BH-221 plegada para guardarse de forma compacta', position: '50% 50%', role: 'producto' }
+      ]
     }
   },
   {
