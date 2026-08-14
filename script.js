@@ -22,7 +22,8 @@
   /* Orden de las diapositivas: hero, variantes reales, configuraciones, detalles. */
   function slidesOf(p) {
     var out = [{ src: p.images.hero.src, alt: p.images.hero.alt, position: p.images.hero.position }];
-    if (p.colors.length > 1) {
+    var includeColorSlides = p.model !== 'BH-153';
+    if (p.colors.length > 1 && includeColorSlides) {
       p.colors.forEach(function (c) {
         out.push({ src: c.image, alt: c.alt || (p.name + ' ' + c.name), position: '50% 50%', color: c.id });
       });
@@ -57,6 +58,7 @@
     host.innerHTML = PRODUCTOS.map(function (p, i) {
       var slides = slidesOf(p);
       var multi = p.colors.length > 1;
+      var colorSlides = p.model !== 'BH-153';
 
       var gal =
         '<div class="gallery" data-gallery role="group" aria-roledescription="carrusel" aria-label="Fotografías de ' + esc(p.name) + '">' +
@@ -100,8 +102,9 @@
         '<div class="vars"><h3 class="confs__title">' + esc(p.featuresTitle) + '</h3>' +
         '<div class="vars__list" role="group" aria-label="Colores disponibles de ' + esc(p.name) + '">' +
         p.colors.map(function (c, k) {
-          return '<button type="button" class="var" data-var="' + esc(c.id) + '" data-slide="' + (k + 1) +
-            '" aria-pressed="' + (k === 0) + '"><i style="background:' + esc(c.hex) + '" aria-hidden="true"></i>' +
+          return '<button type="button" class="var" data-var="' + esc(c.id) + '"' +
+            (colorSlides ? ' data-slide="' + (k + 1) + '"' : '') +
+            ' aria-pressed="' + (k === 0) + '"><i style="background:' + esc(c.hex) + '" aria-hidden="true"></i>' +
             esc(c.name) + '</button>';
         }).join('') + '</div></div>' :
         '<div class="vars"><h3 class="confs__title">Color</h3><div class="vars__list">' +
