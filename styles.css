@@ -187,14 +187,21 @@ button{font:inherit;color:inherit}
 }
 .gallery__btn:hover{background:var(--aqua);border-color:var(--aqua)}
 .gallery__btn svg{width:18px;height:18px;fill:none;stroke:var(--verde-osc);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.gallery__dots{display:flex;gap:7px;justify-content:center;margin-top:12px}
+.gallery__dots{display:flex;gap:1px;justify-content:center;align-items:center;margin-top:7px;min-height:24px}
+.gallery__dotwrap{display:grid;place-items:center;width:22px;height:22px}
 .gallery__dot{
-  width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--linea);cursor:pointer;
-  transition:background var(--t),transform var(--t);
+  width:22px;height:22px;padding:0;border:0;border-radius:50%;background:none;cursor:pointer;
+  display:grid;place-items:center;transition:none;
 }
-.gallery__dot[aria-current="true"]{background:var(--verde);transform:scale(1.25)}
-.gallery__dotwrap{display:flex;justify-content:center}
-.gallery__dotwrap button{width:30px;height:30px;display:grid;place-items:center;background:none;border:0;cursor:pointer}
+.gallery__dot::before{
+  content:"";display:block;width:5px;height:5px;border-radius:50%;background:#B9B4B6;
+  transition:background var(--t),transform var(--t),width var(--t),height var(--t);
+}
+.gallery__dot[aria-current="true"]{background:none;transform:none}
+.gallery__dot[aria-current="true"]::before{width:8px;height:8px;background:var(--verde)}
+.gallery__dotwrap:has(~ .gallery__dotwrap .gallery__dot[aria-current="true"]) .gallery__dot::before{
+  width:4px;height:4px;background:#D8D4D6;
+}
 
 /* configuraciones */
 .confs__title{
@@ -309,6 +316,10 @@ button{font:inherit;color:inherit}
   .product__info{align-self:start}
   .product--flip .product__media{order:2}
   .highs{grid-template-columns:1fr 1fr}
+  .gallery__dots{gap:2px;margin-top:10px;min-height:28px}
+  .gallery__dotwrap,.gallery__dot{width:26px;height:26px}
+  .gallery__dot::before{width:6px;height:6px}
+  .gallery__dot[aria-current="true"]::before{width:9px;height:9px}
 }
 
 /* =================================================== 1024 px y superior */
