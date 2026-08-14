@@ -148,7 +148,7 @@ const PRODUCTOS = [
     boxDimensions: '49 × 10 × 81 cm',
     note: 'El modelo BH-327+212 corresponde al set de bañera; el peso y las medidas incluyen la pieza BH-212.',
     images: {
-      hero: { src: 'assets/images/products/bh-327/bh-327-hero.webp', small: 'assets/images/products/bh-327/bh-327-hero-640.webp', alt: 'Bebé dentro de la bañera plegable Ninino en color verde', position: '50% 40%' },
+      hero: { src: 'assets/images/products/bh-327/bh-327-hero.webp', small: 'assets/images/products/bh-327/bh-327-hero-640.webp', alt: 'Bebé dentro de la bañera plegable Ninino en color amarillo', position: '50% 45%' },
       gallery: [
         { src: 'assets/images/products/bh-327/bh-327-abierta.webp', alt: 'Bañera plegable Ninino BH-327 completamente abierta', position: '50% 50%', role: 'producto' }
       ]
@@ -213,7 +213,7 @@ const PRODUCTOS = [
     boxedWeight: '3.8 kg',
     boxDimensions: '70 × 31.5 × 39 cm',
     images: {
-      hero: { src: 'assets/images/products/bh-810/bh-810-hero.webp', small: 'assets/images/products/bh-810/bh-810-hero-640.webp', alt: 'Niño montado en el scooter Ninino BH-810', position: '50% 50%' },
+      hero: { src: 'assets/images/products/bh-810/bh-810-hero.webp', small: 'assets/images/products/bh-810/bh-810-hero-640.webp', alt: 'Niño montado en el scooter Ninino BH-810', position: '50% 55%' },
       gallery: [
         { src: 'assets/images/products/bh-810/bh-810-giro.webp', alt: 'Detalle del giro del volante del scooter Ninino BH-810', position: '50% 50%', role: 'detalle' },
         { src: 'assets/images/products/bh-810/bh-810-llanta.webp', alt: 'Detalle de la llanta de PU con luces del scooter Ninino BH-810', position: '50% 50%', role: 'detalle' }
@@ -280,7 +280,7 @@ const PRODUCTOS = [
     boxedWeight: '3.0 kg',
     boxDimensions: '43 × 14.5 × 44 cm',
     images: {
-      hero: { src: 'assets/images/products/bh-515/bh-515-hero.webp', small: 'assets/images/products/bh-515/bh-515-hero-640.webp', alt: 'Mamá alimentando a su bebé sentado en la periquera plegable Ninino BH-515', position: '50% 45%' },
+      hero: { src: 'assets/images/products/bh-515/bh-515-hero.webp', small: 'assets/images/products/bh-515/bh-515-hero-640.webp', alt: 'Bebé sentado en la periquera plegable Ninino BH-515', position: '50% 40%' },
       gallery: [
         { src: 'assets/images/products/bh-515/bh-515-plegada.webp', alt: 'Periquera plegable Ninino BH-515 completamente plegada', position: '50% 50%', role: 'producto' },
         { src: 'assets/images/products/bh-515/bh-515-transporte.webp', alt: 'Mamá trasladando la periquera plegable Ninino BH-515 ya plegada', position: '50% 50%', role: 'lifestyle' }

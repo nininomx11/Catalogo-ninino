@@ -181,6 +181,21 @@ del modelo y agrégalas a `images.gallery` (ver 8.2).
 
 ---
 
+## 7-bis. Actualización de imágenes (agosto 2026)
+
+Se reemplazaron las imágenes de los productos BH-327, BH-810, BH-221, BH-515,
+BH-525 (mesita y silla baja) y BH-524 (3 configuraciones) por versiones nuevas
+entregadas por el cliente.
+
+**Nota / excepción a la regla del proyecto:** estas imágenes fueron generadas por
+IA (archivos "ChatGPT Image ..."). La regla del proyecto pide fotografía real para
+productos y personas; el uso de estas imágenes se aprobó expresamente por el
+responsable de la marca y se deja constancia aquí. Conviene validar contra el
+producto físico antes de cualquier impresión o campaña, ya que la IA puede alterar
+detalles (arnés, hebillas, mecanismos, proporciones y colores).
+
+Los hero de BH-522, BH-525, BH-524 y BH-153 se conservaron sin cambios.
+
 ## 8. Mantenimiento
 
 Todo se edita en **`assets/js/products.js`**. No hace falta tocar el HTML.
