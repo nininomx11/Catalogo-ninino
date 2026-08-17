@@ -40,7 +40,7 @@
       if (seen[s.src]) return false;
       seen[s.src] = 1;
       return true;
-    }).slice(0, p.model === 'BH-153' ? 6 : MAX_SLIDES);
+    }).slice(0, p.model === 'BH-153' ? 7 : MAX_SLIDES);
   }
 
   /* ------------------------------------------------------------ tarjetas */
