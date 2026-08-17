@@ -91,9 +91,9 @@ const PRODUCTOS = [
     slug: 'banera-plegable', name: 'Bañera plegable', model: 'BH-327+212', modelAlt: 'BH-327', tagline: 'Perfecta para la hora del baño', age: '0 meses – 3 años aprox.',
     keywords: ['bañera', 'banera', 'tina', 'baño', 'plegable', 'bh-327'],
     colors: [
-      { id: 'verde', name: 'Verde', hex: '#B9CC5E', sku: 'NIN-BATHTUB-BH327212-VER', barcode: '7503061922098', image: 'assets/images/products/bh-327/bh-327-verde.webp', alt: 'Bañera plegable Ninino BH-327 en color verde' },
-      { id: 'rosa', name: 'Rosa', hex: '#E4B4CC', sku: 'NIN-BATHTUB-BH327212-ROS', barcode: '7503061922081', image: 'assets/images/products/bh-327/bh-327-rosa.webp', alt: 'Bañera plegable Ninino BH-327 en color rosa' },
-      { id: 'amarillo', name: 'Amarillo', hex: '#F5C05C', sku: 'NIN-BATHTUB-BH327212-AMA', barcode: '7503061922074', image: 'assets/images/products/bh-327/bh-327-amarillo.webp', alt: 'Bañera plegable Ninino BH-327 en color amarillo' }
+      { id: 'verde', name: 'Verde', hex: '#B9CC5E', sku: 'NIN-BATHTUB-BH327212-VER', barcode: '7503061922098', image: 'assets/images/products/bh-327/banera-plegable-verde.webp', alt: 'Bañera plegable Ninino BH-327 en color verde' },
+      { id: 'rosa', name: 'Rosa', hex: '#E4B4CC', sku: 'NIN-BATHTUB-BH327212-ROS', barcode: '7503061922081', image: 'assets/images/products/bh-327/banera-plegable-rosa.webp', alt: 'Bañera plegable Ninino BH-327 en color rosa' },
+      { id: 'amarillo', name: 'Amarillo', hex: '#F5C05C', sku: 'NIN-BATHTUB-BH327212-AMA', barcode: '7503061922074', image: 'assets/images/products/bh-327/banera-plegable-amarilla.webp', alt: 'Bañera plegable Ninino BH-327 en color amarillo' }
     ],
     featuresTitle: '3 variantes de color', features: [],
     highlights: [{ title: 'Plegable', text: 'Fácil de guardar.' }, { title: 'Cojín incluido', text: 'Una ayuda para su postura.' }],
@@ -101,7 +101,9 @@ const PRODUCTOS = [
     note: 'El modelo BH-327+212 corresponde al set de bañera; el peso y las medidas incluyen la pieza BH-212.',
     images: {
       hero: { src: 'assets/images/products/bh-327/bh-327-hero.webp', small: 'assets/images/products/bh-327/bh-327-hero-640.webp', alt: 'Bebé dentro de la bañera plegable Ninino en color amarillo', position: '50% 45%' },
-      gallery: []
+      gallery: [
+        { src: 'assets/images/products/bh-327/banera-plegable-medidas.webp', alt: 'Medidas verificadas de la bañera plegable Ninino BH-327', position: '50% 50%', role: 'especificacion' }
+      ]
     }
   },
   {
