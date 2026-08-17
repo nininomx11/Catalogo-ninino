@@ -60,12 +60,11 @@ const PRODUCTOS = [
     ],
     sku: 'NIN-PERIQUERA-BH525-GRI', barcode: '7503061922067', weight: '6.6 kg', boxedWeight: '7.4 kg', boxDimensions: '52 × 22 × 52 cm',
     images: {
-      hero: { src: 'assets/images/products/bh-525/bh-525-hero.webp', small: 'assets/images/products/bh-525/bh-525-hero-640.webp', alt: 'Bebé sentado en la periquera Ninino BH-525', position: '50% 50%' },
+      hero: { src: 'assets/images/products/bh-525/bh-525-lifestyle.webp', alt: 'Bebé sentado en la periquera Ninino BH-525 durante la comida', position: '50% 50%' },
       gallery: [
-        { src: 'assets/images/products/bh-525/bh-525-medidas.webp', alt: 'Medidas verificadas de la periquera Ninino BH-525 en configuración alta, silla baja y mesa', position: '50% 50%', role: 'especificacion' },
-        { src: 'assets/images/products/bh-525/bh-525-charola.webp', alt: 'Charola desmontable de la periquera Ninino BH-525', position: '50% 50%', role: 'detalle' },
-        { src: 'assets/images/products/bh-525/bh-525-arnes.webp', alt: 'Arnés de 5 puntos de la periquera Ninino BH-525', position: '50% 50%', role: 'detalle' },
-        { src: 'assets/images/products/bh-525/bh-525-mesa-silla.webp', alt: 'Periquera Ninino BH-525 configurada como silla baja y mesa infantil', position: '50% 50%', role: 'configuracion' }
+        { src: 'assets/images/products/bh-525/bh-525-vista-1.webp', alt: 'Vista limpia de la periquera Ninino BH-525 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-525/bh-525-vista-2.webp', alt: 'Segunda vista limpia de la periquera Ninino BH-525 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-525/bh-525-medidas.webp', alt: 'Medidas verificadas de la periquera Ninino BH-525 en configuración alta, silla baja y mesa', position: '50% 50%', role: 'especificacion' }
       ]
     }
   },
