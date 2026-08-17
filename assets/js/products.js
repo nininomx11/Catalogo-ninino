@@ -122,7 +122,8 @@ const PRODUCTOS = [
         { src: 'assets/images/products/bh-153/bh-153-asiento.webp', alt: 'Detalle del asiento ergonómico de la escalera para WC Ninino BH-153', position: '50% 50%', role: 'detalle' },
         { src: 'assets/images/products/bh-153/bh-153-agarres.webp', alt: 'Detalle de los agarres laterales de la escalera para WC Ninino BH-153', position: '50% 50%', role: 'detalle' },
         { src: 'assets/images/products/bh-153/bh-153-escalones.webp', alt: 'Detalle de los escalones antideslizantes de la escalera para WC Ninino BH-153', position: '50% 50%', role: 'detalle' },
-        { src: 'assets/images/products/bh-153/bh-153-protector.webp', alt: 'Detalle del protector frontal de la escalera para WC Ninino BH-153', position: '50% 50%', role: 'detalle' }
+        { src: 'assets/images/products/bh-153/bh-153-protector.webp', alt: 'Detalle del protector frontal de la escalera para WC Ninino BH-153', position: '50% 50%', role: 'detalle' },
+        { src: 'assets/images/products/bh-153/escalera-153-medidas.webp', alt: 'Medidas verificadas de la escalera para WC Ninino BH-153', position: '50% 50%', role: 'especificacion' }
       ]
     }
   },
