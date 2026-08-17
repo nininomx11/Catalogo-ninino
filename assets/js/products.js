@@ -81,10 +81,9 @@ const PRODUCTOS = [
     images: {
       hero: { src: 'assets/images/products/bh-524/bh-524-hero.webp', small: 'assets/images/products/bh-524/bh-524-hero-640.webp', alt: 'Niño sentado en la silla escalonada Ninino BH-524 junto a la mesa', position: '50% 40%' },
       gallery: [
-        { src: 'assets/images/products/bh-524/bh-524-etapas.webp', alt: 'Etapas de uso de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'configuracion' },
-        { src: 'assets/images/products/bh-524/bh-524-medidas.webp', alt: 'Medidas verificadas de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'especificacion' },
-        { src: 'assets/images/products/bh-524/bh-524-charola.webp', alt: 'Detalle de la charola de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'detalle' },
-        { src: 'assets/images/products/bh-524/bh-524-arnes.webp', alt: 'Detalle del arnés de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'detalle' }
+        { src: 'assets/images/products/bh-524/bh524-vista-frontal.webp', alt: 'Vista frontal de la silla escalonada Ninino BH-524 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-524/bh524-vista-3-4.webp', alt: 'Vista 3/4 de la silla escalonada Ninino BH-524 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-524/bh524-medidas.webp', alt: 'Medidas verificadas de la silla escalonada Ninino BH-524', position: '50% 50%', role: 'especificacion' }
       ]
     }
   },
