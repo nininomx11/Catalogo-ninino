@@ -36,11 +36,11 @@ const PRODUCTOS = [
     ],
     sku: 'NIN-SILLAALTA-BH522-GRI', barcode: '7503061922104', weight: '3.8 kg', boxedWeight: '4.3 kg', boxDimensions: '43.5 × 24.5 × 41 cm',
     images: {
-      hero: { src: 'assets/images/products/bh-522/bh-522-hero.webp', small: 'assets/images/products/bh-522/bh-522-hero-640.webp', alt: 'Bebé sentado en la silla alta 3 en 1 Ninino BH-522 durante la comida', position: '50% 45%' },
+      hero: { src: 'assets/images/products/bh-522/bh522-lifestyle.webp', alt: 'Bebé usando la silla alta 3 en 1 Ninino BH-522 durante la comida', position: '50% 50%' },
       gallery: [
-        { src: 'assets/images/products/bh-522/bh-522-medidas.webp', alt: 'Medidas verificadas de la silla alta 3 en 1 Ninino BH-522', position: '50% 50%', role: 'especificacion' },
-        { src: 'assets/images/products/bh-522/bh-522-movil.webp', alt: 'Silla alta 3 en 1 Ninino BH-522 en configuración móvil', position: '50% 50%', role: 'configuracion' },
-        { src: 'assets/images/products/bh-522/bh-522-detalles.webp', alt: 'Detalles de la silla alta 3 en 1 Ninino BH-522', position: '50% 50%', role: 'detalle' }
+        { src: 'assets/images/products/bh-522/bh522-vista-frontal.webp', alt: 'Vista frontal de la silla alta 3 en 1 Ninino BH-522 sobre fondo blanco', position: '50% 50%', role: 'detalle' },
+        { src: 'assets/images/products/bh-522/bh522-vista-lateral.webp', alt: 'Vista lateral de la silla alta 3 en 1 Ninino BH-522 sobre fondo blanco', position: '50% 50%', role: 'detalle' },
+        { src: 'assets/images/products/bh-522/bh522-medidas.webp', alt: 'Medidas verificadas de la silla alta 3 en 1 Ninino BH-522', position: '50% 50%', role: 'especificacion' }
       ]
     }
   },
