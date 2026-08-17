@@ -175,9 +175,9 @@ button{font:inherit;color:inherit}
 /* galería */
 .gallery__frame{
   position:relative;margin:0;background:#fff;border:1px solid var(--linea);
-  border-radius:var(--r-lg);overflow:hidden;
+  border-radius:var(--r-lg);overflow:hidden;aspect-ratio:1/1;
 }
-.gallery__frame img{width:100%;aspect-ratio:4/3;max-height:420px;object-fit:cover;background:#fff}
+.gallery__frame img{width:100%;height:100%;object-fit:cover;background:#fff}
 .gallery__frame img[hidden]{display:none}
 .gallery__nav{position:absolute;inset:auto 0 0;display:flex;justify-content:space-between;padding:10px;pointer-events:none}
 .gallery__btn{
