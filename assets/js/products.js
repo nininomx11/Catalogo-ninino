@@ -130,7 +130,7 @@ const PRODUCTOS = [
   {
     slug: 'scooter', name: 'Scooter', model: 'BH-810', tagline: 'Movimiento que se disfruta', age: '2+ años',
     keywords: ['scooter', 'montable', 'correpasillos', 'ruedas'],
-    colors: [{ id: 'gris', name: 'Gris', hex: '#BFB6AC', image: 'assets/images/products/bh-810/bh-810-perfil.webp' }],
+    colors: [{ id: 'gris', name: 'Gris', hex: '#BFB6AC', image: 'assets/images/products/bh-810/bh810-vista-lateral.webp' }],
     featuresTitle: 'Funciones principales',
     features: [
       { name: 'Inclinación ergonómica', image: 'assets/images/products/bh-810/bh-810-perfil.webp', alt: 'Vista de perfil del scooter Ninino BH-810', position: '50% 50%' },
@@ -139,10 +139,11 @@ const PRODUCTOS = [
     highlights: [{ title: 'Giros 360°', text: '' }, { title: 'Llantas PU', text: 'Para un deslizamiento suave.' }],
     sku: 'NIN-SCOOTER-BH810-GRI', barcode: '7503061922029', weight: '3.2 kg', boxedWeight: '3.8 kg', boxDimensions: '70 × 31.5 × 39 cm',
     images: {
-      hero: { src: 'assets/images/products/bh-810/bh-810-hero.webp', small: 'assets/images/products/bh-810/bh-810-hero-640.webp', alt: 'Niño montado en el scooter Ninino BH-810', position: '50% 55%' },
+      hero: { src: 'assets/images/products/bh-810/bh810-lifestyle.webp', alt: 'Niño montado en el scooter Ninino BH-810', position: '50% 50%' },
       gallery: [
-        { src: 'assets/images/products/bh-810/bh-810-giro.webp', alt: 'Detalle del giro del volante del scooter Ninino BH-810', position: '50% 50%', role: 'detalle' },
-        { src: 'assets/images/products/bh-810/bh-810-llanta.webp', alt: 'Detalle de la llanta de PU con luces del scooter Ninino BH-810', position: '50% 50%', role: 'detalle' }
+        { src: 'assets/images/products/bh-810/bh810-vista-3-4.webp', alt: 'Vista 3/4 limpia del scooter Ninino BH-810 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-810/bh810-vista-lateral.webp', alt: 'Vista lateral limpia del scooter Ninino BH-810 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-810/bh810-medidas.webp', alt: 'Medidas verificadas del scooter Ninino BH-810', position: '50% 50%', role: 'especificacion' }
       ]
     }
   },
