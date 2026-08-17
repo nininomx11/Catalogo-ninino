@@ -176,10 +176,11 @@ const PRODUCTOS = [
     highlights: [{ title: 'Arnés de 3 puntos', text: 'Sujeción ajustable durante su uso.' }, { title: 'Plegado compacto', text: 'Ocupa menos espacio al guardar.' }],
     sku: 'NIN-SCOM-BH515-VER', barcode: '7503061922005', weight: '2.3 kg', boxedWeight: '3.0 kg', boxDimensions: '43 × 14.5 × 44 cm',
     images: {
-      hero: { src: 'assets/images/products/bh-515/bh-515-hero.webp', small: 'assets/images/products/bh-515/bh-515-hero-640.webp', alt: 'Bebé sentado en la periquera plegable Ninino BH-515', position: '50% 40%' },
+      hero: { src: 'assets/images/products/bh-515/515-lifestyle.webp', alt: 'Bebé sentado en la periquera plegable Ninino BH-515 durante la comida', position: '50% 50%' },
       gallery: [
-        { src: 'assets/images/products/bh-515/bh-515-plegada.webp', alt: 'Periquera plegable Ninino BH-515 completamente plegada', position: '50% 50%', role: 'producto' },
-        { src: 'assets/images/products/bh-515/bh-515-transporte.webp', alt: 'Mamá trasladando la periquera plegable Ninino BH-515 ya plegada', position: '50% 50%', role: 'lifestyle' }
+        { src: 'assets/images/products/bh-515/515-vista-1.webp', alt: 'Vista limpia de la periquera plegable Ninino BH-515 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-515/515-vista-2.webp', alt: 'Vista plegada de la periquera plegable Ninino BH-515 sobre fondo blanco', position: '50% 50%', role: 'producto' },
+        { src: 'assets/images/products/bh-515/515-medidas.webp', alt: 'Medidas verificadas de la periquera plegable Ninino BH-515', position: '50% 50%', role: 'especificacion' }
       ]
     }
   }
