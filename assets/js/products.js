@@ -157,7 +157,6 @@ const PRODUCTOS = [
     images: {
       hero: { src: 'assets/images/products/bh-221/bh-221-hero.webp', small: 'assets/images/products/bh-221/bh-221-hero-640.webp', alt: 'Bebé recostado en la bañera térmica Ninino BH-221 dentro de la tina', position: '50% 45%' },
       gallery: [
-        { src: 'assets/images/products/bh-221/221B_banera.webp', alt: 'Bañera térmica Ninino BH-221 colocada dentro de una bañera para su uso', position: '50% 50%', role: 'producto' },
         { src: 'assets/images/products/bh-221/221B_vista_1.webp', alt: 'Vista limpia de la bañera térmica Ninino BH-221 sobre fondo blanco', position: '50% 50%', role: 'producto' },
         { src: 'assets/images/products/bh-221/221B_vista_2.webp', alt: 'Segunda vista limpia de la bañera térmica Ninino BH-221 sobre fondo blanco', position: '50% 50%', role: 'producto' },
         { src: 'assets/images/products/bh-221/221B_medidas.webp', alt: 'Medidas verificadas de la bañera térmica Ninino BH-221', position: '50% 50%', role: 'especificacion' }
