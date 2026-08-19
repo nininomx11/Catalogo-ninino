@@ -133,7 +133,7 @@ const PRODUCTOS = [
     colors: [{ id: 'gris', name: 'Gris', hex: '#BFB6AC', image: 'assets/images/products/bh-810/bh810-vista-lateral.webp' }],
     featuresTitle: 'Funciones principales',
     features: [
-      { name: 'Inclinación ergonómica', image: 'assets/images/products/bh-810/bh-810-perfil.webp', alt: 'Vista de perfil del scooter Ninino BH-810', position: '50% 50%' },
+      { name: 'Inclinación ergonómica', image: 'assets/images/products/bh-810/bh810-vista-lateral.webp', alt: 'Vista de perfil del scooter Ninino BH-810', position: '50% 50%' },
       { name: 'Botones con sonido', image: 'assets/images/products/bh-810/bh-810-botones.webp', alt: 'Detalle del volante con botones de sonido del scooter Ninino BH-810', position: '50% 50%' }
     ],
     highlights: [{ title: 'Giros 360°', text: '' }, { title: 'Llantas PU', text: 'Para un deslizamiento suave.' }],
